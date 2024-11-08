@@ -109,11 +109,13 @@ export function MovemeterChatbot({ onClose, toLocation }) {
                         : "bg-gray-100"
                     }`}
                   >
-                    {message.text}
+                    {message.text.split('\n').map((line, index) => (
+                      <div key={index}>{line}</div>
+                    ))}
                     {message.showTopSchoolsButton && (
                       <Button
                         onClick={handleTopSchools}
-                        className="mt-2 bg-[#F1889F] hover:bg-[#E16B84] text-white w-full"
+                        className="mt-5 bg-[#77003b]  hover:bg-[#77003b]/95 text-white w-full uppercase"
                       >
                         Contact Agent
                       </Button>

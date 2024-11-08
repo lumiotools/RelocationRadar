@@ -170,7 +170,7 @@ export function Movemeter({ fromLocation, toLocation }) {
                   <Progress
                     value={category.score}
                     className="w-full h-3 mb-4"
-                    indicatorColor="bg-[#77003b]"
+                    indicatorColor="!bg-[#77003b]"
                   />
 
                   <h3
@@ -254,7 +254,7 @@ export function Movemeter({ fromLocation, toLocation }) {
 
                     <span
                       className={`text-xs font-medium ${
-                        activeTab === category.id ? "text-[#77003b]" : ""
+                        activeTab === category.id ? "text-[#77003b]  " : ""
                       }`}
                     >
                       {category.name}
@@ -329,13 +329,13 @@ export function Movemeter({ fromLocation, toLocation }) {
         )}
       </AnimatePresence>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 3 }}
-      >
-        <Agent location={toLocation} />
-      </motion.div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 3 }}
+        >
+            <Agent location={toLocation} />
+        </motion.div>
     </motion.div>
   );
 }

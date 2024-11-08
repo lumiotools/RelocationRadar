@@ -38,7 +38,7 @@ export function Agent({ location }) {
 
             <Button
               type="submit"
-              className="bg-[#F1889F] hover:bg-[#E16B84] text-white w-full"
+              className="bg-[#77003b] hover:bg-[#77003b]/95 text-white w-full"
             >
               FIND AN AGENT
             </Button>
